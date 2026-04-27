@@ -1,12 +1,16 @@
 'use client'
 
 import { useState } from 'react'
+import { useDispatch } from 'react-redux'
 import { useRouter } from 'next/navigation'
+import { setUser } from '@/store/userSlice'
 
 export default function LoginForm() {
+  const dispatch = useDispatch()
+  const router = useRouter()
+
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const router = useRouter()
 
   const handleLogin = async () => {
     const res = await fetch('/api/login', {
@@ -15,10 +19,8 @@ export default function LoginForm() {
     })
 
     if (res.ok) {
+      dispatch(setUser({ email }))  // ✅ HERE
       router.push('/dashboard')
-      router.refresh()
-    } else {
-      alert('Invalid credentials')
     }
   }
 

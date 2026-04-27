@@ -1,3 +1,7 @@
+'use client'
+import { useSelector } from 'react-redux'
 export default function Profile() {
-  return <h1>Profile Page</h1>
+ const user = useSelector((state: any) => state.user.user)
+
+  return <div>email: {user?.email}</div>
 }
