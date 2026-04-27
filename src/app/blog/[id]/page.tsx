@@ -36,6 +36,10 @@ export default async function Blog({
       <Link href={`/blog`}>
         View All posts
       </Link>
+      <br />
+      <Link href={`/blog/latest`}>
+        View Latest posts
+      </Link>
     </div>
   )
 }

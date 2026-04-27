@@ -2,18 +2,14 @@
 
 import { useRouter } from 'next/navigation'
 
-export default function Dashboard() {
+export default function LogoutButton() {
   const router = useRouter()
 
   const handleLogout = async () => {
     await fetch('/api/logout', { method: 'POST' })
     router.push('/login')
+    router.refresh() // important!
   }
 
-  return (
-    <div>
-      <h1>Dashboard</h1>
-      <button onClick={handleLogout}>Logout</button>
-    </div>
-  )
+  return <button onClick={handleLogout}>Logout</button>
 }
