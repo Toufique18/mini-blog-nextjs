@@ -28,9 +28,9 @@ export default function RootLayout({
     <html>
       <body>
         <Providers>
-  <Navbar />
-  <main style={{ padding: 20 }}>{children}</main>
-</Providers>
+          <Navbar />
+          <main style={{ padding: 20 }}>{children}</main>
+        </Providers>
       </body>
     </html>
   );
