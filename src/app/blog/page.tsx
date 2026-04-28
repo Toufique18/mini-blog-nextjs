@@ -25,6 +25,7 @@
 
 'use client'
 
+import Link from 'next/link'
 import { useGetPostsQuery } from '../../store/apiSlice'
 
 export default function BlogPage() {
@@ -38,7 +39,11 @@ export default function BlogPage() {
       <h1>Posts</h1>
 
       {data.slice(0, 5).map((post: any) => (
-        <p key={post.id}>{post.title}</p>
+        <p key={post.id}>
+          <Link href={`/blog/${post.id}`}>
+  <h3>{post.title}</h3>
+</Link>
+        </p>
       ))}
     </div>
   )
