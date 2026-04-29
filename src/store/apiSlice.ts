@@ -15,6 +15,7 @@ export const apiSlice = createApi({
     getPost: builder.query({
       query: (id: string) => `/posts/${id}`,
     }),
+    
   }),
 })
 

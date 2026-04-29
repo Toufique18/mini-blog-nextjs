@@ -4,7 +4,7 @@ export const infoApi = createApi({
   reducerPath: 'infoApi',
 
   baseQuery: fetchBaseQuery({
-    baseUrl: 'https://jsonplaceholder.typicode.com',
+    baseUrl: 'http://localhost:3001',
   }),
 
   endpoints: (builder) => ({
@@ -15,10 +15,19 @@ export const infoApi = createApi({
     getUser: builder.query({
       query: (id: string) => `/users/${id}`,
     }),
+
+   deleteUser: builder.mutation({
+      query: (id: string) => ({
+        url: `/users/${id}`,
+        method: 'DELETE',
+      }),
+    }),
+
   }),
 })
 
 export const {
   useGetUsersQuery,
   useGetUserQuery,
+  useDeleteUserMutation,
 } = infoApi

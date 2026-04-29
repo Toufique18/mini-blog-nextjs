@@ -8,7 +8,7 @@ export async function POST(req: Request) {
   const { email, password } = await req.json()
 
   //fetch users from API
-  const res = await fetch('https://jsonplaceholder.typicode.com/users')
+  const res = await fetch('http://localhost:3001/users')
   const users = await res.json()
 
 
