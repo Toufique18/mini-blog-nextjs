@@ -22,9 +22,9 @@ const { data } = useGetPostsQuery()
         <div key={post.id} style={{ marginBottom: 10 }}>
           <p>Blog ID: {post.id}</p>
           <Link href={`/blog/${post.id}`}>
-                <h3>{post.title}</h3>
+                <h3>Title: {post.title}</h3>
           </Link>
-          <p>{post.body}</p>
+          <p>Description: {post.body}</p>
           
         </div>
       ))}
