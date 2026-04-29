@@ -14,7 +14,7 @@ export default async function Navbar() {
           <div className="hidden md:flex gap-4 text-sm font-medium text-[var(--muted)]">
             <Link href="/about" className="hover:text-[var(--foreground)] transition-colors">About</Link>
             <Link href="/contact" className="hover:text-[var(--foreground)] transition-colors">Contact</Link>
-            <Link href="/blog/1">Blog 1</Link>
+            <Link href="/blog">Blog</Link>
           </div>
         </div>
         

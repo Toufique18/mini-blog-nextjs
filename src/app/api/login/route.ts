@@ -1,3 +1,4 @@
+
 import { NextResponse } from 'next/server'
 import jwt from 'jsonwebtoken'
 
@@ -6,7 +7,16 @@ const SECRET = 'mysecretkey' // later move to .env
 export async function POST(req: Request) {
   const { email, password } = await req.json()
 
-  if (email === 'test@test.com' && password === '1234') {
+  //fetch users from API
+  const res = await fetch('https://jsonplaceholder.typicode.com/users')
+  const users = await res.json()
+
+
+  // find user by email or check for test account
+  const user = users.find((u: any) => u.email === email)
+  const isTestAccount = email === 'test@test.com'
+
+  if ((user || isTestAccount) && password === '1234') {
     const token = jwt.sign(
       { email }, // payload
       SECRET,
@@ -17,6 +27,7 @@ export async function POST(req: Request) {
 
     res.cookies.set('token', token, {
       httpOnly: true,
+      path: '/',
     })
 
     return res

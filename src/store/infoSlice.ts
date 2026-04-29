@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
-export const infoSlice = createApi({
-  reducerPath: 'api',
+export const infoApi = createApi({
+  reducerPath: 'infoApi',
 
   baseQuery: fetchBaseQuery({
     baseUrl: 'https://jsonplaceholder.typicode.com',
@@ -21,4 +21,4 @@ export const infoSlice = createApi({
 export const {
   useGetUsersQuery,
   useGetUserQuery,
-} = infoSlice
+} = infoApi

@@ -29,9 +29,10 @@ export default function LoginForm() {
       if (res.ok) {
         dispatch(setUser({ email }))
 
-  setTimeout(() => {
-    router.push('/dashboard')
-  }, 100) // Refresh to update server components (Navbar)
+        router.refresh()
+        setTimeout(() => {
+          router.push('/dashboard')
+        }, 100) // Refresh to update server components (Navbar)
       } else {
         setError('Invalid email or password')
       }

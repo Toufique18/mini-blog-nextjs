@@ -11,10 +11,12 @@ export default function Contact() {
     <div>
       <h1>Posts</h1>
 
-      {data.slice(0, 5).map((post: any) => (
-        <p key={post.id}> {post.name}</p>
-        <p key={post.id}> {post.username}</p>
-        <p key={post.id}> {post.title}</p>
+      {data.slice(0, 5).map((user: any) => (
+        <div key={user.id}>
+           <p>{user.name}</p>
+           <p>{user.username}</p>
+           <p>{user.email}</p>
+   </div>
       ))}
     </div>
   )

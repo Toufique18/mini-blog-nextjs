@@ -1,20 +1,24 @@
+'use client'
+
 import Link from "next/link"
 
-async function getPosts() {
-  const res = await fetch('https://jsonplaceholder.typicode.com/posts')
-  return res.json()
-}
+// async function getPosts() {
+//   const res = await fetch('https://jsonplaceholder.typicode.com/posts')
+//   return res.json()
+// }
 
-export default async function LatestPosts() {
-  const posts = await getPosts()
+import { useGetPostsQuery } from "@/store/apiSlice"
 
-  const latest = posts.slice(0, 3)
+export default function LatestPosts() {
+const { data } = useGetPostsQuery()
+
+  //const posts = data?.slice(0, 3)
 
   return (
     <div>
       <h1>Latest Posts</h1>
 
-      {latest.map((post: any) => (
+      {data?.slice(0, 3).map((post: any) => (
         <div key={post.id} style={{ marginBottom: 10 }}>
           <p>Blog ID: {post.id}</p>
           <Link href={`/blog/${post.id}`}>
