@@ -17,10 +17,14 @@
 //     </div>
 //   )
 // }
+
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
+
 import * as jwt from 'jsonwebtoken'
 import LogoutButton from '../components/LogoutButton'
+import UserForm from '../components/UserForm'
+import UsersList from '../components/UsersList'
 const SECRET = 'mysecretkey'
 
 export default async function Dashboard() {
@@ -39,6 +43,8 @@ export default async function Dashboard() {
         <h1>Dashboard</h1>
         <p>Welcome {(user as any).email}</p>
         <LogoutButton />
+        <UserForm/>
+        <UsersList/>
       </div>
     )
   } catch (err) {
