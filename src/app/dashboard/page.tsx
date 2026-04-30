@@ -43,7 +43,7 @@ export default async function Dashboard() {
         <h1>Dashboard</h1>
         <p>Welcome {(user as any).email}</p>
         <LogoutButton />
-        <UserForm/>
+        {/* <UserForm/> */}
         <UsersList/>
       </div>
     )

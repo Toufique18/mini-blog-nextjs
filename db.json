@@ -3,8 +3,9 @@
     {
       "id": "1",
       "name": "Leanne Graham",
-      "username": "Bret",
+      "username": "Brete",
       "email": "Sincere@april.biz",
+      "password": "654321",
       "address": {
         "street": "Light Kulas",
         "suite": "Apt. 556",
@@ -15,7 +16,7 @@
           "lng": "81.1496"
         }
       },
-      "phone": "1-770-736-8031 x56442",
+      "phone": "770736803156442",
       "website": "hildegard.org",
       "company": {
         "name": "Romaguera-Crona",
@@ -28,6 +29,7 @@
       "name": "Ervin Howell",
       "username": "Antonette",
       "email": "Shanna@melissa.tv",
+      "password": "1234",
       "address": {
         "street": "Victor Plains",
         "suite": "Suite 879",
@@ -51,6 +53,7 @@
       "name": "Clementine Bauch",
       "username": "Samantha",
       "email": "Nathan@yesenia.net",
+      "password": "12345",
       "address": {
         "street": "Douglas Extension",
         "suite": "Suite 847",
@@ -74,6 +77,7 @@
       "name": "Patricia Lebsack",
       "username": "Karianne",
       "email": "Julianne.OConner@kory.org",
+      "password": "12345",
       "address": {
         "street": "Hoeger Mall",
         "suite": "Apt. 692",
@@ -97,6 +101,7 @@
       "name": "Chelsey Dietrich",
       "username": "Kamren",
       "email": "Lucio_Hettinger@annie.ca",
+      "password": "12345",
       "address": {
         "street": "Skiles Walks",
         "suite": "Suite 351",
@@ -120,6 +125,7 @@
       "name": "Mrs. Dennis Schulist",
       "username": "Leopoldo_Corkery",
       "email": "Karley_Dach@jasper.info",
+      "password": "1234",
       "address": {
         "street": "Norberto Crossing",
         "suite": "Apt. 950",
@@ -143,6 +149,7 @@
       "name": "Kurtis Weissnat",
       "username": "Elwyn.Skiles",
       "email": "Telly.Hoeger@billy.biz",
+      "password": "12345",
       "address": {
         "street": "Rex Trail",
         "suite": "Suite 280",
@@ -166,6 +173,7 @@
       "name": "Nicholas Runolfsdottir V",
       "username": "Maxime_Nienow",
       "email": "Sherwood@rosamond.me",
+      "password": "1234",
       "address": {
         "street": "Ellsworth Summit",
         "suite": "Suite 729",
@@ -189,6 +197,7 @@
       "name": "Glenna Reichert",
       "username": "Delphine",
       "email": "Chaim_McDermott@dana.io",
+      "password": "12345",
       "address": {
         "street": "Dayna Park",
         "suite": "Suite 449",
@@ -212,6 +221,7 @@
       "name": "Clementina DuBuque",
       "username": "Moriah.Stanton",
       "email": "Rey.Padberg@karina.biz",
+      "password": "1234",
       "address": {
         "street": "Kattie Turnpike",
         "suite": "Suite 198",
@@ -234,6 +244,7 @@
       "name": "Toufique Eamam",
       "username": "Toufique",
       "email": "teamam203018@bscse.uiu.ac.bd",
+      "password": "12345",
       "phone": "01884518773",
       "website": "toufique.com",
       "id": "XSResQgrGzI"
@@ -242,6 +253,7 @@
       "name": "Toufique Eamam",
       "username": "Toufique",
       "email": "teamam203018@bscse.uiu.ac.bd",
+      "password": "1234",
       "phone": "01884518773",
       "website": "toufique.com",
       "id": "Hkuh8CMlMME"
@@ -258,6 +270,7 @@
       "name": "Toufique",
       "username": "Toufiq",
       "email": "teamam203018@bscse.uiu.ac.bd",
+      "password": "123456",
       "phone": "01884518773",
       "website": "toufiq.com",
       "id": "NHuUNFX50II"
@@ -265,11 +278,27 @@
     {
       "name": "johny",
       "email": "johny@gmail.com",
-      "password": "12345678",
+      "password": "1234",
       "username": "johny",
       "createdAt": "2026-04-30T03:39:43.905Z",
       "id": "-euSrrHsot0"
     }
+  ],
+
+  "posts":[
+
+    {
+    "userId": 1,
+    "id": 1,
+    "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+  },
+  {
+    "userId": 1,
+    "id": 2,
+    "title": "qui est esse",
+    "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+  }
   ],
   "$schema": "./node_modules/json-server/schema.json"
 }

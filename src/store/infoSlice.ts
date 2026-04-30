@@ -28,6 +28,16 @@ export const infoApi = createApi({
    invalidatesTags: ['Users'],
   }),
 
+  updateUser: builder.mutation({
+  query: ({ id, ...data }) => ({
+    url: `users/${id}`,
+    method: 'PATCH',
+    body: data,
+  }),
+  invalidatesTags: ['Users'],
+  }),
+
+
    deleteUser: builder.mutation({
       query: (id: string) => ({
         url: `/users/${id}`,
@@ -45,6 +55,7 @@ export const {
   useGetUsersQuery,
   useGetUserQuery,
   useAddUserMutation,
+  useUpdateUserMutation,
   useDeleteUserMutation,
 
 } = infoApi

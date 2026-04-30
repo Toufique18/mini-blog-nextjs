@@ -13,10 +13,11 @@ export async function POST(req: Request) {
 
 
   // find user by email or check for test account
-  const user = users.find((u: any) => u.email === email)
+  const user = users.find((u: any) => u.email === email && u.password === password)
+  //const userPassword = users.find((u: any) => u.password === password)
   const isTestAccount = email === 'test@test.com'
 
-  if ((user || isTestAccount) && password === '1234') {
+  if (user || isTestAccount) {
     const token = jwt.sign(
       { email }, // payload
       SECRET,

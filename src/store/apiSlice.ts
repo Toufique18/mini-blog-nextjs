@@ -4,7 +4,7 @@ export const apiSlice = createApi({
   reducerPath: 'api',
 
   baseQuery: fetchBaseQuery({
-    baseUrl: 'https://jsonplaceholder.typicode.com',
+    baseUrl: 'http://localhost:3001',
   }),
 
   endpoints: (builder) => ({
