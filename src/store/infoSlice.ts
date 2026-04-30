@@ -7,7 +7,7 @@ export const infoApi = createApi({
     baseUrl: 'http://localhost:3001',
   }),
 
-  tagTypes: ['Users'],
+  tagTypes: ['Users', 'Posts'],
 
   endpoints: (builder) => ({
     getUsers: builder.query({
@@ -46,6 +46,37 @@ export const infoApi = createApi({
       invalidatesTags: ['Users'],
     }),
 
+    getPosts: builder.query({
+      query: () => '/posts',
+      providesTags: ['Posts'],
+    }),
+
+    addPost: builder.mutation({
+      query: (post) => ({
+        url: '/posts',
+        method: 'POST',
+        body: post,
+      }),
+      invalidatesTags: ['Posts'],
+    }),
+
+    updatePost: builder.mutation({
+      query: ({ id, ...data }) => ({
+        url: `/posts/${id}`,
+        method: 'PATCH',
+        body: data,
+      }),
+      invalidatesTags: ['Posts'],
+    }),
+
+    deletePost: builder.mutation({
+      query: (id) => ({
+        url: `/posts/${id}`,
+        method: 'DELETE',
+      }),
+      invalidatesTags: ['Posts'],
+    }),
+
     
 
   }),
@@ -57,5 +88,9 @@ export const {
   useAddUserMutation,
   useUpdateUserMutation,
   useDeleteUserMutation,
+  useGetPostsQuery,
+  useAddPostMutation,
+  useUpdatePostMutation,
+  useDeletePostMutation,
 
 } = infoApi
