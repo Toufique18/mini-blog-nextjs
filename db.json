@@ -237,6 +237,38 @@
       "phone": "01884518773",
       "website": "toufique.com",
       "id": "XSResQgrGzI"
+    },
+    {
+      "name": "Toufique Eamam",
+      "username": "Toufique",
+      "email": "teamam203018@bscse.uiu.ac.bd",
+      "phone": "01884518773",
+      "website": "toufique.com",
+      "id": "Hkuh8CMlMME"
+    },
+    {
+      "name": "John ",
+      "email": "john@hmail.com",
+      "password": "1234",
+      "username": "john",
+      "createdAt": "2026-04-30T03:30:00.348Z",
+      "id": "eAhVohhonpo"
+    },
+    {
+      "name": "Toufique",
+      "username": "Toufiq",
+      "email": "teamam203018@bscse.uiu.ac.bd",
+      "phone": "01884518773",
+      "website": "toufiq.com",
+      "id": "NHuUNFX50II"
+    },
+    {
+      "name": "johny",
+      "email": "johny@gmail.com",
+      "password": "12345678",
+      "username": "johny",
+      "createdAt": "2026-04-30T03:39:43.905Z",
+      "id": "-euSrrHsot0"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

@@ -20,7 +20,10 @@ export default async function Navbar() {
         
         <div className="flex gap-4 items-center text-sm font-medium">
           {!token ? (
-            <Link href="/login" className="btn btn-primary px-4 py-2 text-xs">Login</Link>
+            <>
+              <Link href="/signup" className="hover:text-[var(--primary)] transition-colors">Sign Up</Link>
+              <Link href="/login" className="btn btn-primary px-4 py-2 text-xs">Login</Link>
+            </>
           ) : (
             <>
               <Link href="/dashboard" className="hover:text-[var(--primary)] transition-colors">Dashboard</Link>
