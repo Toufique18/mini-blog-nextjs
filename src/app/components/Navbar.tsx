@@ -4,10 +4,20 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { useSelector } from 'react-redux'
 import LogoutButton from './LogoutButton'
+import { useGetUsersQuery } from "@/store/infoSlice"
+
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const user = useSelector((state: any) => state.user.user)
+  const { data } = useGetUsersQuery()
+
+
+   // Find matching user from fetched data
+  const matchedUser = data?.find((u: any) => u.email === user?.email)
+
+
+
 
   return (
     <nav className="sticky top-0 z-50 bg-opacity-80 backdrop-blur-md border-b border-[var(--border)] bg-[var(--background)]">
@@ -27,10 +37,10 @@ export default function Navbar() {
                 className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors focus:outline-none"
               >
                 <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold">
-                  {user?.email?.[0].toUpperCase() || 'U'}
+                  {matchedUser?.name?.[0].toUpperCase() || 'U'}
                 </div>
                 <span className="text-sm font-medium text-gray-700 hidden sm:block">
-                  {user?.email?.split('@')[0] || 'User'}
+                  {matchedUser?.name || 'User'}
                 </span>
                 <svg className={`w-4 h-4 text-gray-500 transition-transform ${isOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
