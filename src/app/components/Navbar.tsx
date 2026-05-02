@@ -13,7 +13,7 @@ export default function Navbar() {
   const { data } = useGetUsersQuery()
 
 
-   // Find matching user from fetched data
+  // Find matching user from fetched data
   const matchedUser = data?.find((u: any) => u.email === user?.email)
 
 
@@ -22,9 +22,10 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 bg-opacity-80 backdrop-blur-md border-b border-[var(--border)] bg-[var(--background)]">
       <div className="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
-        <div className="flex gap-6 items-center">
+        <div className="flex gap-6 items-center justify-between w-full flex-1">
           <Link href="/" className="font-semibold text-lg tracking-tight">MiniBlog</Link>
           <div className="hidden md:flex gap-4 text-sm font-medium text-[var(--muted)]">
+
             <Link href="/about" className="hover:text-[var(--foreground)] transition-colors">About</Link>
             <Link href="/contact" className="hover:text-[var(--foreground)] transition-colors">Contact</Link>
             <Link href="/blog">Blog</Link>
@@ -49,11 +50,20 @@ export default function Navbar() {
 
               {isOpen && (
                 <>
-                  <div 
-                    className="fixed inset-0 z-10" 
+                  <div
+                    className="fixed inset-0 z-10"
                     onClick={() => setIsOpen(false)}
                   ></div>
                   <div className="absolute right-0 mt-2 w-48 rounded-xl bg-white shadow-xl ring-1 ring-black ring-opacity-5 z-20 py-1">
+                    {matchedUser?.role === 'admin' && (
+                      <Link
+                        href="/adminDashboard"
+                        onClick={() => setIsOpen(false)}
+                        className="block px-4 py-2 text-sm text-blue-600 font-bold hover:bg-gray-50"
+                      >
+                        Admin Dashboard
+                      </Link>
+                    )}
                     <Link
                       href="/dashboard/profile"
                       onClick={() => setIsOpen(false)}

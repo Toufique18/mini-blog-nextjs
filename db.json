@@ -247,6 +247,7 @@
       "password": "12345",
       "phone": "01884518773",
       "website": "toufique.com",
+      "role": "admin",
       "id": "XSResQgrGzI"
     },
     {
@@ -306,14 +307,8 @@
     {
       "userId": "1",
       "title": "Train Journey",
-      "body": "There’s something uniquely calming about a train journey. Unlike the rush of airplanes or the noise of buses, trains move at a steady rhythm that almost feels like a lullaby. As the wheels glide over the tracks, you get time to slow down and simply observe the world outside.",
+      "body": "There’s something uniquely calming about a train journey. Unlike the rush of airplanes or the noise of buses, trains move at a steady rhythm that almost feels like a lullaby. As the wheels glide over the tracks, you get time to slow down and simply observe the world outside.the world outsidethe world outsidethe world outsidethe world outside",
       "id": "frr5SCbTcDg"
-    },
-    {
-      "userId": "1",
-      "title": "Boat",
-      "body": "Through the window, scenes change like pages of a storybook—green fields, small villages, rivers, and busy stations filled with people from all walks of life. Each stop brings new faces, brief conversations, and a glimpse into different lifestyles.",
-      "id": "a6K4SNOylvw"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
