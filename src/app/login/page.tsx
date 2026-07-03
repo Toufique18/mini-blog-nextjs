@@ -14,7 +14,7 @@ export default async function LoginPage() {
       jwt.verify(token, SECRET)
       redirect('/dashboard')
     } catch (err) {
-      // Token invalid, stay on login page
+      
     }
   }
 
