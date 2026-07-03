@@ -24,7 +24,7 @@ export default function UserForm() {
   const handleSubmit = async (e: any) => {
     e.preventDefault()
 
-    await addUser(form) //API call
+    await addUser(form) 
 
     setForm({
       name: '',
