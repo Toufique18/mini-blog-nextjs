@@ -4,7 +4,7 @@ export default function Contact() {
 
   const { data, isLoading, error } = useGetUsersQuery()
 
-  if (isLoading) return <p>Loading...</p>
+  if (isLoading) return <p>Loading......</p>
   if (error) return <p>Error</p>
 
   return (
